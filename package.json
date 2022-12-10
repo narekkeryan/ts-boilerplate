@@ -5,6 +5,7 @@
   "repository": "git@github.com:narekkeryan/ts-boilerplate.git",
   "author": "Narek Keryan <narek.keryan@gmail.com> (https://www.nkgdev.com)",
   "license": "MIT",
+  "bin": "bin/init.ts",
   "scripts": {
     "build": "rimraf dist && tsc",
     "start": "node dist/main.js",
