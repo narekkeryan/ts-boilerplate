@@ -3,6 +3,7 @@
 import { exec } from "child_process";
 import { promisify } from "util";
 import { generatePackageJson } from "./util/generate.package.json";
+import { version } from "../package.json";
 
 const remoteUrl: string = 'git@github.com:narekkeryan/ts-boilerplate.git';
 
@@ -12,7 +13,7 @@ const execute = promisify(exec);
 
 (async () => {
   // step 1: clone repository
-  await execute(`git clone --single-branch ${remoteUrl} ${projectDirectory}`);
+  await execute(`git clone --single-branch --branch ${version} ${remoteUrl} ${projectDirectory}`);
 
   // step 2: remove `.git` directory and initialize with new one
   await execute(`cd ${projectDirectory} && rm -rf .git && git init`);

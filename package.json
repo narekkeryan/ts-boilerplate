@@ -1,5 +1,5 @@
 {
-  "name": "ts-boilerplate",
+  "name": "@g-bot/ts-boilerplate",
   "version": "1.0.0",
   "main": "dist/main.js",
   "repository": "git@github.com:narekkeryan/ts-boilerplate.git",
