@@ -1,13 +1,13 @@
-#!/usr/bin/env ts-node
+#!/usr/bin/env node
 
 import { exec } from "child_process";
 import { promisify } from "util";
 import { generatePackageJson } from "./util/generate.package.json";
 import { version } from "../package.json";
 
-const remoteUrl: string = 'git@github.com:narekkeryan/ts-boilerplate.git';
+const remoteUrl = 'git@github.com:narekkeryan/ts-boilerplate.git';
 
-const projectDirectory: string = process.argv[2] || 'ts-boilerplate';
+const projectDirectory = process.argv[2] || 'ts-boilerplate';
 
 const execute = promisify(exec);
 
