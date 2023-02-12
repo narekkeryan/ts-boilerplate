@@ -1,6 +1,6 @@
-import { readFile, writeFile } from "fs/promises";
+const { readFile, writeFile } = require('fs/promises');
 
-export async function generatePackageJson(projectDirectory) {
+exports.generatePackageJson = async function (projectDirectory) {
   const packageJsonPath = `./${projectDirectory}/package.json`;
 
   const packageJsonBuffer = await readFile(packageJsonPath);
